@@ -4,6 +4,20 @@
    License: none (public domain)
 */
 
+@20px: 2rem;
+
+.flex-nowrap-spbetween {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+
+.flex-center-end {
+	display:flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,5 +69,174 @@ table {
 
 html, body {
     height: 100%;
+	font-size: 62.5%;
+	font-family: 'Mandali', sans-serif;
 }
 
+
+.container {
+	color: black;
+	max-width: 1000px;
+	margin: 0 20%;
+	height: 100%;
+}
+
+header {
+	width: 90%;
+	display: flex;
+	justify-content: flex-end;
+	font-size: 2rem;
+	margin: 0 auto;
+	padding: @20px;
+
+	nav {
+		justify-items: space-betweem;
+
+
+		a {
+			text-decoration: none;
+			padding: @20px;
+			color: black;
+		}
+		a:hover{
+			background: black;
+			color: white;
+		}
+	}
+
+	@media (max-width: 50rem){
+		nav {
+			width: 100%;
+			display: flex;
+			flex-flow: column wrap;
+			align-items: center;
+			border: .1rem solid black;
+			a:hover{
+			background: black;
+			color: white;
+			
+		}
+		}
+		
+	}
+}
+
+.content {
+		margin: 0 10%;
+	
+	.top-content {
+		background: #E6E6E6;
+		border-radius: .5rem;
+		padding: 8rem;
+		margin-bottom: @20px;
+		color: black;
+
+		img {
+			width: 18rem;
+		}
+
+		h1 {
+			font-size: 3rem;
+			margin: @20px;
+		}
+
+		p {
+			font-size: 1.5rem;
+			margin: @20px;
+		}
+		button {
+			background: #A2A2A2;
+			padding: 1rem;
+			margin: @20px;
+			border-radius: .5rem;
+		}
+		@media (max-width: 50rem){
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			padding-left: 1rem;
+			img {
+				width: 10rem;
+				height: 10rem;
+			}
+			h1 {
+			font-size: 2rem;
+			}
+
+		}
+	}
+
+	.middle-content {
+		.flex-nowrap-spbetween();
+		.about-me {
+			width: 50%;
+			h3 {
+				font-size: 1.5rem;
+				padding: 1rem;
+			}
+			p{
+				font-size: 1rem;
+				padding: 1rem;	
+			}
+		}
+
+		.things-i-know {
+			width: 50%;
+			h3{
+				font-size: 1.5rem;
+				padding: 1rem;
+			}
+			ul{
+				font-size: 1rem;
+			li {
+				border: 1px solid gray;
+				padding: .5rem .3rem;
+			  }
+			}
+		}
+	}
+
+	.bottom-content {
+			width: 100%;
+			margin: 0 20% @20px 20%;
+		h3{
+			font-size: 2rem;
+			margin: 1rem 0 1rem @20px;
+		}
+		table {
+			border: .8px solid gray;
+			margin-left: @20px;
+			th{
+				font-size: 1.5rem;
+				padding: 1rem 5rem 1rem 1rem;
+			}
+			td{
+				font-size: 1rem;
+				padding: 1rem .5rem;
+			}
+			.table-style {
+				background: #E6E6E6;
+			}
+		}
+		@media (max-width: 50rem) {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			margin: 0 auto;
+			table {
+				margin: 1rem auto;
+				th {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background: #767676;
+	color: white;
+	.flex-center-end();
+	padding: @20px 0;
+	font-size: 1rem;
+}
