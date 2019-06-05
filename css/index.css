@@ -1,1 +1,305 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+.flex-nowrap-spbetween {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.flex-center-end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'Mandali', sans-serif;
+}
+.container {
+  color: black;
+  max-width: 1000px;
+  margin: 0 20%;
+  height: 100%;
+}
+header {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+header nav {
+  justify-items: space-betweem;
+}
+header nav a {
+  text-decoration: none;
+  padding: 2rem;
+  color: black;
+}
+header nav a:hover {
+  background: black;
+  color: white;
+}
+@media (max-width: 50rem) {
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border: 0.1rem solid black;
+  }
+  header nav a:hover {
+    background: black;
+    color: white;
+  }
+}
+.content {
+  margin: 0 10%;
+}
+.content .top-content {
+  background: #E6E6E6;
+  border-radius: 0.5rem;
+  padding: 8rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+.content .top-content img {
+  width: 18rem;
+}
+.content .top-content h1 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+.content .top-content p {
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+.content .top-content button {
+  background: #A2A2A2;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 50rem) {
+  .content .top-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+  .content .top-content img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .content .top-content h1 {
+    font-size: 2rem;
+  }
+}
+.content .middle-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.content .middle-content .about-me {
+  width: 50%;
+}
+.content .middle-content .about-me h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.content .middle-content .about-me p {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.content .middle-content .things-i-know {
+  width: 50%;
+}
+.content .middle-content .things-i-know h3 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.content .middle-content .things-i-know ul {
+  font-size: 1rem;
+}
+.content .middle-content .things-i-know ul li {
+  border: 1px solid gray;
+  padding: 0.5rem 0.3rem;
+}
+.content .bottom-content {
+  width: 100%;
+  margin: 0 20% 2rem 20%;
+}
+.content .bottom-content h3 {
+  font-size: 2rem;
+  margin: 1rem 0 1rem 2rem;
+}
+.content .bottom-content table {
+  border: 0.8px solid gray;
+  margin-left: 2rem;
+}
+.content .bottom-content table th {
+  font-size: 1.5rem;
+  padding: 1rem 5rem 1rem 1rem;
+}
+.content .bottom-content table td {
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+}
+.content .bottom-content table .table-style {
+  background: #E6E6E6;
+}
+@media (max-width: 50rem) {
+  .content .bottom-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .content .bottom-content table {
+    margin: 1rem auto;
+  }
+  .content .bottom-content table th {
+    padding: 0;
+  }
+}
+footer {
+  background: #767676;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem 0;
+  font-size: 1rem;
+}
